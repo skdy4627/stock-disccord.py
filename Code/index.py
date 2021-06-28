@@ -29,7 +29,7 @@ import re
 # ===== 변수 선언 ===== #
 client = discord.Client()
 cooldown = cooldown.CooldownClient()
-token = "ODQ4OTI4ODQzOTcxNjkwNTI4.YLTwmA.LnGTQIpb_MrDGsv0KoiVIJlcSHU"
+token = "Your token!"
 prefix = "@"
 
 # ===== DB ===== #
@@ -193,45 +193,6 @@ async def on_message(message):
         user_users.update_one({"_id": get_id}, {"$inc": {"money": iargs}})
         embed=discord.Embed(title="성공", description=f"`{iargs}원`으로 설정했습니다.", color=0x05b102)
         await message.channel.send(embed=embed)
-        
-
-    # # 공장 목록
-    # elif cmd == "공장목록":
-    #     embed=discord.Embed(title="🏭︎ | 공장 목록", description="===============", color=0xf0d000)
-    #     embed.add_field(name="🥬 | 김치 공장\n🚲 | 자전거 공장\n🏍 | 오토바이 공장\n🚗 | 자동차 공장\n🔨 | 제련소(철)\n💎 | 제련소(다이아)\n💽 | 반도체 공장\n☢ | 원자력 발전소", value="각 공장에 대한 설명은 \"@ㄸ 공장 설명 <공장 이름>\"", inline=False)
-    #     await message.channel.send(embed=embed)
-    
-    # # 공장 설명
-    # elif cmd == "공장설명":
-    #     rhd_name = args[0]
-    #     if rhd_name == "김치 공장":
-    #         embed=discord.Embed(title="🥬 | 김치 공장", description="30분 동안", color=0xf0d000)
-
-    # 공장 가동
-    # 김치 공장 > 음료수 공장 > 자전거 공장 > 오토바이 공장 > 자동차 공장 > 제련 공장(철) > 다이아 제련 > 반도체 공장 > 원자력 발전소
-
-
-    # 송금
-    # elif cmd == "송금":
-    #     get_user = args[0]
-    #     put_money = int(args[1])
-    #     #if user_users.find_one({"_id": get_user}):
-    #     user_users.update_one({"_id": id}, {"$inc": {"money": -put_money}})
-    #     user_users.update_one({"_id": get_user}, {"$inc": {"money": put_money}})
-    #     embed=discord.Embed(title="성공", description=f"{get_user.name}님 에게 `{put_money}원`을 송금 했습니다.", color=0xf0d000)
-    #     await message.channel.send(embed=embed)
-    #     embed=discord.Embed(title="성공", description=f"{message.author.name}님 에게서 `{put_money}원`을 송금 받았습니다.", color=0xf0d000)
-    #     await id.send(embed=embed)
-        # else:
-        #     embed=discord.Embed(title="오류", description=f"대상이 없습니다", color=0xbd0a0a)
-        #     await message.channel.send(embed=embed)
-
-    # 남을위한도박
-    elif cmd == "남을위한도박":
-        get_id = int(args[0])
-        if user_users.find_one({"_id": get_id}):
-            get_money = int(args[1])
-            return
 
     # 도박
     elif cmd == "도박":
