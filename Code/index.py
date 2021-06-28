@@ -102,7 +102,7 @@ async def on_message(message):
             embed=discord.Embed(title="이미 가입 되셨습니다!", color=0xbd0a0a)
             await message.reply(embed=embed)
 
-    # 투게더
+    # 투게더 
     elif cmd == "유튜브":
         link = await togetherControl.create_link(message.author.voice.channel.id, 'youtube')
         embed=discord.Embed(title="유튜브 투게더 | Youtube Together", description=f">>> {link} <<<", color=0xf0d000)
