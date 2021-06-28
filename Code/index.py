@@ -81,7 +81,7 @@ async def on_message(message):
                 "한국전력": 0,
                 "LG디스플레이": 0,
                 "SK하이닉스": 0,
-                "삼성SDI": 0,
+                "삼성SDI": 0, 
                 "기아": 0,
                 "현대차": 0,
                 "KT": 0,
