@@ -8,7 +8,7 @@
     - sleep값을 임의로 변경해 사용 가능
 
 # module
-https://github.com/cheocho/Cooldown
+https://github.com/cheocho/Cooldown \n
 https://github.com/EQUENOS/dislash.py
 
 ps. 코드가 난잡할 수 있음 완성형이 아님
