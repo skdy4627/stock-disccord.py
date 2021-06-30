@@ -1,4 +1,7 @@
 # discord.py bot with sock | dpy 주식 봇
+
+disocrd sotock, 디스코드 주식
+   
 + 파일 설명
   + index.py
     - main code | 메인코드
