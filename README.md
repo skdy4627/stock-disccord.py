@@ -11,7 +11,7 @@ disocrd stock, 디스코드 주식
     - sleep값을 임의로 변경해 사용 가능
 
 # module
-[cooldown module](https://github.com/cheocho/Cooldown)
+[cooldown module](https://github.com/cheocho/Cooldown)    
 [참고 코드](https://github.com/cord0318/Stock-Bot/blob/main/main.py)
 
 ps. 코드가 난잡할 수 있음 완성형이 아님
