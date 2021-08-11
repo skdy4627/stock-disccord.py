@@ -168,31 +168,10 @@ async def on_message(message):
 
     # 돈
     elif cmd == "돈":
-        try:
-            get_id = int(args[0])
-            data = user_users.find_one({"_id": get_id})
-            embed=discord.Embed(title=f"{get_id}님의 정보", description=f"보유 금액 : {data['money']}원", color=0x0999e1)
-            await message.reply(embed=embed)
-        except:
-            data = user_users.find_one({"_id": id})
-            embed=discord.Embed(title=f"{message.author.name} 님의 정보", description=f"보유 금액 : {data['money']}원", color=0x0999e1)
-            await message.reply(embed=embed)
-
-
-    # 관리자돈설정
-    elif cmd == "관리자돈추가":
         get_id = int(args[0])
-        iargs = int(args[1])
-        user_users.update_one({"_id": get_id}, {"$inc": {"money": iargs}})
-        embed=discord.Embed(title="성공", description=f"`{iargs}원`으로 설정했습니다.", color=0x05b102)
-        await message.channel.send(embed=embed)
-    # 관리자돈설정
-    elif cmd == "관리자돈설정":
-        get_id = int(args[0])
-        iargs = int(args[1])
-        user_users.update_one({"_id": get_id}, {"$inc": {"money": iargs}})
-        embed=discord.Embed(title="성공", description=f"`{iargs}원`으로 설정했습니다.", color=0x05b102)
-        await message.channel.send(embed=embed)
+        data = user_users.find_one({"_id": get_id})
+        embed=discord.Embed(title=f"{get_id}님의 정보", description=f"보유 금액 : {data['money']}원", color=0x0999e1)
+        await message.reply(embed=embed)
 
     # 도박
     elif cmd == "도박":
@@ -424,7 +403,7 @@ async def on_message(message):
                     embed=discord.Embed(title="정확히 입력해주세요", description="`\"@주식 매수 <주식이름> <개수>\"`로 입력해주세요.", color=0xbd0a0a)
                     await message.channel.send(embed=embed)
             else:
-                await message.channel.send("음수 ㅗ")
+                await message.channel.send("음수")
 
         elif args[0] == "매도":
             if int(args[2]) > 0:
