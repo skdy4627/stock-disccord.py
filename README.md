@@ -10,9 +10,10 @@ disocrd stock, 디스코드 주식
     - 주식 가격을 가져와서 DB에 저장하는 코드
     - sleep값을 임의로 변경해 사용 가능
 
-# module
+사용하려면 MongoDB 설치 후 user.users에 주식이름, 초기 가격을 써야 함
+
+# 참고한 코드
 [cooldown module](https://github.com/cheocho/Cooldown)    
 [참고 코드](https://github.com/cord0318/Stock-Bot/blob/main/main.py)
 
-ps. 코드가 난잡할 수 있음 완성형이 아님
-
+ps. 코드가 난잡함
